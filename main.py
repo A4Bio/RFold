@@ -63,14 +63,14 @@ class Exp:
         print_log('Test F1: {0:.4f}, Precision: {1:.4f}, Recall: {2:.4f}, Runtime: {3:.4f}\n'.format(test_f1, test_precision, test_recall, test_runtime))
         return test_f1, test_precision, test_recall, test_runtime
 
-if __name__ == '__main__':
-    RNA_SS_data = collections.namedtuple('RNA_SS_data', 'seq ss_label length name pairs')
+# if __name__ == '__main__':
+#     RNA_SS_data = collections.namedtuple('RNA_SS_data', 'seq ss_label length name pairs')
 
-    args = create_parser()
-    config = args.__dict__
-    exp = Exp(args)
+#     args = create_parser()
+#     config = args.__dict__
+#     exp = Exp(args)
 
-    print('>>>>>>>>>>>>>>>>>>>>>>>>>> training <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
-    exp.test()
-    print('>>>>>>>>>>>>>>>>>>>>>>>>>> testing  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
-    test_f1, test_precision, test_recall, test_runtime = exp.test()
+#     print('>>>>>>>>>>>>>>>>>>>>>>>>>> training <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+#     exp.test()
+#     print('>>>>>>>>>>>>>>>>>>>>>>>>>> testing  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+#     test_f1, test_precision, test_recall, test_runtime = exp.test()
