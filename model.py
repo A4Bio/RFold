@@ -83,7 +83,7 @@ class RFold_Model(nn.Module):
         self.readout = nn.Conv2d(c_hid, c_out, kernel_size=1, stride=1, padding=0)
         self.seq2map = Seq2Map(input_dim=4, num_hidden=args.num_hidden, dropout=args.dropout)
 
-    def forward(self, x, seqs):
+    def forward(self, seqs):
         attention = self.seq2map(seqs)
         x = (attention * torch.sigmoid(attention)).unsqueeze(0)
         latent, skips = self.encoder(x)

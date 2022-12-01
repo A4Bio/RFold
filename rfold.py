@@ -69,7 +69,7 @@ class RFold(object):
             seqs = torch.argmax(seq_ori, axis=-1)
             s_time = time.time()
             with torch.no_grad():
-                pred_contacts = self.model(None, seqs)
+                pred_contacts = self.model(seqs)
 
             pred_contacts = row_col_argmax(pred_contacts) * constraint_matrix(seq_ori)
 

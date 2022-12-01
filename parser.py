@@ -13,8 +13,8 @@ def create_parser():
     parser.add_argument('--seed', default=111, type=int)
 
     # dataset parameters
-    parser.add_argument('--data_name', default='RNAStralign_alone', choices=['RNAStralign_alone'])
-    parser.add_argument('--data_root', default='./data/')
+    parser.add_argument('--data_name', default='ArchiveII', choices=['ArchiveII', 'RNAStralign', 'bpRNA'])
+    parser.add_argument('--data_root', default='./data/archiveII_all')
     parser.add_argument('--batch_size', default=1, type=int)
     parser.add_argument('--num_workers', default=8, type=int)
 
