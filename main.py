@@ -3,7 +3,7 @@ import torch
 import logging
 import collections
 import os.path as osp
-from parser import create_parser
+# from parser import create_parser
 
 import warnings
 warnings.filterwarnings('ignore')
