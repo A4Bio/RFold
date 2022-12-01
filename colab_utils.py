@@ -36,15 +36,13 @@ def sequence2onehot(seq, device):
     seqs = list(map(lambda x: seq_dict[x], seq))
     return torch.tensor(seqs).unsqueeze(0).to(device)
 
-def get_cut_len(data_len, set_len):
-    l = data_len
-    l = set_len if l <= set_len else (((l - 1) // 16) + 1) * 16
-    return l
+def get_cut_len(l):
+    return (((l - 1) // 16) + 1) * 16
 
 def process_seqs(seq, device):
     seq = sequence2onehot(seq, device=device)
     seq_len = len(seq)
-    nseq_len = get_cut_len(seq_len, 80)
+    nseq_len = get_cut_len(seq_len)
     nseq = F.pad(seq, (0, nseq_len - seq_len))
     nseq_one_hot = F.one_hot(nseq).float()
     return nseq, nseq_one_hot, seq_len
