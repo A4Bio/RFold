@@ -40,8 +40,8 @@ def get_cut_len(l):
     return (((l - 1) // 16) + 1) * 16
 
 def process_seqs(seq, device):
-    seq = sequence2onehot(seq, device=device)
     seq_len = len(seq)
+    seq = sequence2onehot(seq, device=device)
     nseq_len = get_cut_len(seq_len)
     nseq = F.pad(seq, (0, nseq_len - seq_len))
     nseq_one_hot = F.one_hot(nseq).float()
