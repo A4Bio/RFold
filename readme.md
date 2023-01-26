@@ -38,7 +38,12 @@ We provide a Colab demo for reproducing the results and testing RNA sequences by
 If you are interested in our repository and our paper, please cite the following paper:
 
 ```
-TBD
+@article{tan2022rfold,
+  title={RFold: Towards Simple yet Effective RNA Secondary Structure Prediction},
+  author={Tan, Cheng and Gao, Zhangyang and Li, Stan Z},
+  journal={arXiv preprint arXiv:2212.14041},
+  year={2022}
+}
 ```
 
 ## Feedback
