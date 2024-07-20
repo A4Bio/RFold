@@ -1,4 +1,4 @@
-# RFold: RNA Secondary Structure Prediction with Decoupled Optimization
+# RFold: Deciphering RNA Secondary Structure Prediction: A Probabilistic K-Rook Matching Perspective
 
 ![GitHub stars](https://img.shields.io/github/stars/A4Bio/RFold)  ![GitHub forks](https://img.shields.io/github/forks/A4Bio/RFold?color=green) <!-- ![visitors](https://visitor-badge.glitch.me/badge?page_id=A4Bio.RFold) -->
 
@@ -6,7 +6,7 @@
 
 The secondary structure of ribonucleic acid (RNA) is more stable and accessible in the cell than its tertiary structure, making it essential for functional prediction. Although deep learning has shown promising results in this field, current methods suffer from poor generalization and high complexity. In this work, we present RFold, a simple yet effective RNA secondary structure prediction in an end-to-end manner. RFold introduces a decoupled optimization process that decomposes the vanilla constraint satisfaction problem into row-wise and column-wise optimization, simplifying the solving process while guaranteeing the validity of the output. Moreover, RFold adopts attention maps as informative representations instead of designing hand-crafted features. Extensive experiments demonstrate that RFold achieves competitive performance and about eight times faster inference efficiency than the state-of-the-art method.
 
-## Model overview
+## Model Overview
 
 We show the overall RFold framework.
 
@@ -38,14 +38,13 @@ We provide a Colab demo for reproducing the results and testing RNA sequences by
 If you are interested in our repository and our paper, please cite the following paper:
 
 ```
-@article{tan2022rfold,
-  title={RFold: RNA Secondary Structure Prediction with Decoupled Optimization},
-  author={Tan, Cheng and Gao, Zhangyang and Li, Stan Z},
-  journal={arXiv preprint arXiv:2212.14041},
-  year={2022}
+@inproceedings{tandeciphering,
+  title={Deciphering RNA Secondary Structure Prediction: A Probabilistic K-Rook Matching Perspective},
+  author={Tan, Cheng and Gao, Zhangyang and Hanqun, CAO and Chen, Xingran and Wang, Ge and Wu, Lirong and Xia, Jun and Zheng, Jiangbin and Li, Stan Z},
+  booktitle={Forty-first International Conference on Machine Learning}
 }
 ```
 
 ## Feedback
-If you have any issue about this work, please feel free to contact me by email: 
+If you have any issues about this work, please feel free to contact me by email: 
 * Cheng Tan: tancheng@westlake.edu.cn
